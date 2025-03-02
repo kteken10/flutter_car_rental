@@ -1,3 +1,4 @@
+import 'package:car_rental_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -6,29 +7,41 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(left: 16.0, top: 16.0),
+    return Padding(
+      padding: const EdgeInsets.only(left: 16.0, top: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          LocationHeader(),
+          const LocationHeader(),
           Row(
             children: [
-              CircleAvatar(
-                backgroundColor: Colors.white,
-                radius: 22,
-                child: Icon(
-                  FontAwesomeIcons.car,
-                
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: AppColors.grayFineColor, width: 2),
+                ),
+                child: const CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 22,
+                  child: Icon(
+                    FontAwesomeIcons.car,
+                    color: Colors.black,
+                  ),
                 ),
               ),
-              SizedBox(width: 10),
-              CircleAvatar(
-                backgroundColor: Colors.white,
-                radius: 22,
-                backgroundImage: AssetImage('assets/african_man.jpg'),
+              const SizedBox(width: 10),
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: AppColors.grayFineColor, width: 2),
+                ),
+                child: const CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 22,
+                  backgroundImage: AssetImage('assets/african_man.jpg'),
+                ),
               ),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
             ],
           ),
         ],

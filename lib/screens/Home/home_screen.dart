@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: AppColors.backgroundColor,
       body: Column(
         children: [
           const Header(),
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                               left: 25, bottom: 15, right: 20, top: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: grayFineColor,
+                            color: AppColors.grayFineColor,
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

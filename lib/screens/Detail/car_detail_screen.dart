@@ -34,7 +34,7 @@ class CarDetailScreen extends StatelessWidget {
                   ),
                   margin: const EdgeInsets.only(top: 45),
                   decoration: BoxDecoration(
-                    color: backgroundColor,
+                    color: AppColors.backgroundColor,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   //
