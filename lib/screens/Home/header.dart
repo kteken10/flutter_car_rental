@@ -18,11 +18,11 @@ class Header extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: AppColors.grayFineColor, width: 2),
+                  border: Border.all(color: AppColors.grayFineColor, width: 0.25),
                 ),
                 child: const CircleAvatar(
                   backgroundColor: Colors.white,
-                  radius: 22,
+                  radius: 25,
                   child: Icon(
                     FontAwesomeIcons.car,
                     color: Colors.black,
@@ -33,11 +33,11 @@ class Header extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: AppColors.grayFineColor, width: 2),
+                  border: Border.all(color: AppColors.grayFineColor, width: 0.25),
                 ),
                 child: const CircleAvatar(
                   backgroundColor: Colors.white,
-                  radius: 22,
+                  radius: 25,
                   backgroundImage: AssetImage('assets/african_man.jpg'),
                 ),
               ),
@@ -77,7 +77,7 @@ class LocationHeader extends StatelessWidget {
             Text(
               "Green Wood Drive, Miami",
               style: TextStyle(
-                color: Colors.black,
+                color: AppColors.ternaryColor,
               ),
             ),
           ],

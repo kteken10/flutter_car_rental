@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   font_awesome_flutter: ^10.8.0
+  flutter_svg: ^2.0.17
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,11 @@ flutter:
     - assets/map.png
     - assets/maserati.png
     - assets/rolls_royce.png
+
+    - assets/ferrari_logo.svg
+    - assets/mercedes_logo.svg
+    - assets/nissan_logo.svg
+    - assets/toyota_logo.svg
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

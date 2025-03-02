@@ -3,6 +3,7 @@ import 'package:car_rental_app/constants.dart';
 import 'package:car_rental_app/model/car.dart';
 import 'package:car_rental_app/screens/Detail/car_detail_screen.dart';
 import 'package:car_rental_app/screens/Home/header.dart';
+import 'package:car_rental_app/widget/tab_car_model.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,6 +16,37 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           const Header(),
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0, top: 16.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Morning, Kevin!",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.ternaryColor,
+                ),
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0, top: 8.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Time to eat the road! Select the car that matches your style",
+                style: TextStyle(
+                  fontSize: 11,
+                  color: AppColors.grayBoldColor,
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0, top: 8.0),
+            child: TabCarModel(),
+          ),
           Expanded(
             child: ListView.builder(
               shrinkWrap: true,
