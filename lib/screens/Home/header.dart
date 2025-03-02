@@ -1,29 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:car_rental_app/constants.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 16.0, top: 16.0),
+    return const Padding(
+      padding: EdgeInsets.only(left: 16.0, top: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const LocationHeader(),
+          LocationHeader(),
           Row(
             children: [
               CircleAvatar(
-                backgroundColor: primaryColor,
+                backgroundColor: Colors.white,
                 radius: 22,
+                child: Icon(
+                  FontAwesomeIcons.car,
+                
+                ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               CircleAvatar(
-                backgroundColor: secondaryColor,
+                backgroundColor: Colors.white,
                 radius: 22,
+                backgroundImage: AssetImage('assets/african_man.jpg'),
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: 20),
             ],
           ),
         ],
@@ -37,10 +42,10 @@ class LocationHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: const [
+      children: [
         Text(
           "My location",
           style: TextStyle(
@@ -48,11 +53,21 @@ class LocationHeader extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        Text(
-          "Green Wood Drive",
-          style: TextStyle(
-            color: Colors.black,
-          ),
+        Row(
+          children: [
+            Icon(
+              FontAwesomeIcons.mapMarkerAlt,
+              color: Colors.red,
+              size: 16,
+            ),
+            SizedBox(width: 5),
+            Text(
+              "Green Wood Drive, Miami",
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+          ],
         ),
       ],
     );
